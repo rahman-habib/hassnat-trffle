@@ -65190,10 +65190,98 @@
       "links": {},
       "address": "0xeff34B652a8d884A8A0a3258A239AdAcD8E0Bb19",
       "transactionHash": "0x6f6325a48b0a03048cdd167d54f86ef9779f01d58763d1c8aea3827f2456f142"
+    },
+    "14489": {
+      "events": {
+        "0x7a527596b5baad0cad51971e7665de7bca60e72d12e366c3d2c9784cbaa553b4": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "BI",
+              "type": "string"
+            }
+          ],
+          "name": "BuildingAdded",
+          "type": "event"
+        },
+        "0x92557a386ebbb8aa5bef3f46a129f5391e7e520790f83fe3659532e40e719ac7": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "caseCount",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "Owner",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "Contractor",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "FM",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "BuildingId",
+              "type": "string"
+            },
+            {
+              "indexed": false,
+              "name": "TsetIDs",
+              "type": "bytes32[]"
+            },
+            {
+              "indexed": false,
+              "name": "TIDs",
+              "type": "bytes32[]"
+            },
+            {
+              "indexed": false,
+              "name": "RHuIDs",
+              "type": "bytes32[]"
+            },
+            {
+              "indexed": false,
+              "name": "AQuIDs",
+              "type": "bytes32[]"
+            },
+            {
+              "indexed": false,
+              "name": "time",
+              "type": "uint256"
+            }
+          ],
+          "name": "CaseCreated",
+          "type": "event"
+        },
+        "0xaf0abe1a0d7d496f6c9df4983129711df86f4727bcfa20d168f670500a5286d8": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "diff",
+              "type": "uint256"
+            }
+          ],
+          "name": "diffcalculated",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0x3ADa86203797508A9b5148982C970e8752f1F2dE",
+      "transactionHash": "0xc29d9f3aeec0c244a6e36b9e8d99c0c428497adaf3d865eb75d35d4393f5d821"
     }
   },
   "schemaVersion": "3.4.16",
-  "updatedAt": "2024-07-10T13:49:17.835Z",
+  "updatedAt": "2024-07-12T09:20:12.993Z",
   "networkType": "ethereum",
   "devdoc": {
     "methods": {}
