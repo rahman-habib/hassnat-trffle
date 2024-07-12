@@ -19,9 +19,9 @@ module.exports = async function(deployer) {
   // Function Calls (Replace with your desired test inputs)
   // console.log("instance==>",instance);
 
-  const buildingOwner = "0x364b8da74D2a948fDe31D162174bf4A2827e64E4";
-  let contractorAddress = "0x639b761065bE3144DF96642AD5c00d4554cCe0f4";
-  let fmAddress = "0xB7B1A8945c29850a926fAee93d233D7F0Fea8524";
+  const buildingOwner = "0x58cd5762c1f4b81f87f2707778232ac6f9e29424";
+  let contractorAddress = "0x0a39208260dec0a5dB33049745257eBEB82cf791";
+  let fmAddress = "0x73adE8A3c36A42930011Dc0c0BEc39838B428587";
   let buildingId = "0x1234567890abcdef";
   let sensorIds = ["0xdeadbeef", "0xcafebabe"];
   let tid = ["0xdeadbeef", "0xcafebabe"];
@@ -41,7 +41,7 @@ function calculate(item){
   // - boAdd (onlyOwner): Not called in this example (add owner to whitelist)
   let boAdd=await instance.boAdd(
     buildingOwner);
-    boAdd= await calculate(boAdd);
+    // boAdd= await calculate(boAdd);
 
   // Building Registration
   let addCase=await instance.addCase(
@@ -55,11 +55,11 @@ function calculate(item){
     aqIds,
     11,
     energyRate  );
-    addCase= await calculate(addCase)
+    // addCase= await calculate(addCase)
 
   // Deposit Management
   let addDepo=await instance.addDepo({from:buildingOwner,value: 11000000000000000000 }); // 11 ETH (adjust value)
-  addDepo= await calculate(addDepo)
+  // addDepo= await calculate(addDepo)
 
   // Sensor Data Management
   let rh = 200; // Dummy relative humidity
@@ -68,24 +68,24 @@ function calculate(item){
   let measure=[rh,t,aqu]
   let devId="0x1234567890abcdef"
   let addvalue=await instance.addValue(devId,measure,buildingId);
-  addvalue= await calculate(addvalue)
+  // addvalue= await calculate(addvalue)
 
   // Energy Value Management (optional)
   let energyValue = 1000; // Dummy energy value
  let eValue= await instance.addEValue(energyValue,buildingId);
- eValue= await calculate(eValue)
+//  eValue= await calculate(eValue)
 
   // Fault Status Checks (all public)
   let fromTime = Math.floor(Date.now() / 1000) - 3600; // Check the last hour
   let toTime = Math.floor(Date.now() / 1000);
   let fmFaults = await instance.statusQuoFM(buildingId, fromTime, toTime);
-  fmFaults= await calculate(fmFaults)
+  // fmFaults= await calculate(fmFaults)
 
   let contractorFaults = await instance.statusQuoCO(buildingId, fromTime, toTime);
-  contractorFaults= await calculate(contractorFaults)
+  // contractorFaults= await calculate(contractorFaults)
 
   let allFaults = await instance.statusQuoAll(buildingId, fromTime, toTime);
-  allFaults= await calculate(allFaults)
+  // allFaults= await calculate(allFaults)
 
   console.log("boAdd : ",boAdd);
   console.log("add case : ",addCase);
